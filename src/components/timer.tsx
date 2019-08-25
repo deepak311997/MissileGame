@@ -4,9 +4,12 @@ import Avatar from '@material-ui/core/Avatar';
 import { deepOrange, deepPurple } from '@material-ui/core/colors';
 
 const Container = styled.div`
-  margin-top: 50px;
+  margin: 50px 0 10px 0;
   font-size: 25px;
-  tex
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Timer: React.FC = () => {
@@ -18,12 +21,12 @@ const Timer: React.FC = () => {
       setCurrentTime(currentTime + 1);
     }, 1000)
   }, [currentTime]);
-  
+
   return (
     <Container>
-      {currentTime}
+      <div>Timer</div>
+      <div>{currentTime}</div>
     </Container>
   );
-
-}
+};
 export default Timer;

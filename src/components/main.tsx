@@ -5,6 +5,7 @@ import Missiles from './missiles';
 import FinishLine from './finish-line';
 import Player from './player';
 import Timer from './timer';
+import GameLevel from './game-level';
 
 const Wrapper = styled.div`
     height: 70%;
@@ -19,7 +20,10 @@ const PlayGround = styled.div`
 const Main: React.FC = () => {
     return (
         <Wrapper>
-            <Timer />
+            <div>
+                <Timer />
+                <GameLevel />
+            </div>
             <PlayGround>
                 <Player />
                 <Missiles />
@@ -27,5 +31,5 @@ const Main: React.FC = () => {
             </PlayGround>
         </Wrapper>
     );
-}
+};
 export default Main;
